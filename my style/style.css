@@ -4,15 +4,81 @@ html {
     scroll-behavior: smooth; 
   
 }
+:root{
+  --color:#f12f2f;
+}
 span{
-    color:red;
+color: var(--color);
 }
 .button{
-    background-color: red;
+    background-color:var(--color);
 }
     
 
+#themeIcon{
 
+  color: #111111;
+  border-radius: 50%;
+ position: absolute;
+ top: 10%;
+ left: 3%;
+  font-size: 40px;
+  
+
+
+}
+#icon{
+ 
+  opacity: 0;
+}
+#colorBox{
+  position: absolute;
+  top: 30%;
+  left: 100%;
+  width: 12%;
+ 
+  padding: 5px; display: none;
+ 
+  gap: 10px;
+  border-radius: 10px;
+  background-color: #3D7EAE;
+ 
+}
+
+
+.btn1{
+  background-color: #3498db;
+  border-radius: 50%;
+  color: #3498db;
+}
+.btn2{
+  background-color: #ff1756;
+  border-radius: 50%;
+  color: #ff1756;
+}
+.btn3{
+  background-color: #1cb65d;
+  border-radius: 50%;
+  color:#1cb65d ;
+}
+.btn4{
+  background-color: #f12f2f;
+  border-radius: 50%;
+  color:#f12f2f ;
+}
+.btn5{
+  background-color:blue;
+  border-radius: 50%;
+  color:blue ;
+}
+.back{
+  background-color: var(--color);
+}
+.btn6{
+  background-color: #ae00ff;
+  border-radius: 50%;
+  color:#ae00ff ;
+}
 /* From Uiverse.io by Galahhad */ 
 .theme-switch {
     --toggle-size: 30px;
@@ -265,7 +331,7 @@ textarea{
 }
 .scrollToTop i{
     font-size: 40px;
-    color: red;
+    color: var(--color);
 }
 
 .display{

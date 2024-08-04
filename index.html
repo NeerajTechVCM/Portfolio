@@ -65,6 +65,20 @@
 
   <section class="page-section" id="home">
     <div class="container-fluid  mt-1 py-5 px-3">
+      <input type="checkbox" id="icon" role="switch">
+      
+      <label for="icon"><i class="fa-solid fa-gear" id="themeIcon"></i></label>
+    <div class="theme " id="colorBox">
+     <center> 
+      <button class="btn btn1" data-color="#3498db">sb</button>
+      <button class="btn btn2" data-color="#ff1756">p</button>
+      <button class="btn btn3" data-color="#1cb65d">g</button>
+      <button class="btn btn4" data-color="#f12f2f">r</button>
+      <button class="btn btn5" data-color="blue">bl</button>
+      <button class="btn btn6" data-color="#ae00ff">pl</button>
+    </center>
+      </div>
+
       <div class="container p-2">
         <div class="row gy-4">
           <div class="col-md-6">
@@ -72,7 +86,7 @@
               Hi THERE,
             </h6>
             <br>
-            <h2>I Am <span class="auto-type">
+            <h2>I Am <span class="auto-type" id="name">
                 Neeraj pal
               </span>
             </h2>
@@ -87,6 +101,8 @@
             </div>
             <br>
             <button class="btn button">Hire Me</button>
+            <br>
+            
           </div>
           <div class="col-md-6 d-flex justify-content-center align-items-center ">
          
@@ -111,7 +127,7 @@
               </div>
             </label>
      
-            <div class=" d-flex justify-content-center align-items-end  bg-danger ms-lg-5 mt-5 h-55 w-55 "
+            <div class=" d-flex justify-content-center align-items-end  back ms-lg-5 mt-5 h-55 w-55 "
               style="border-radius:36% 71% 10% 10% / 74% 79% 40% 29%; ">
               <img src="assets/me.png" alt="" width="40% " height="50%" class="img-fluid ">
             </div>
@@ -131,11 +147,11 @@
         <div style="width: 80px; height:5px; border-radius:10px" class="mt-1 button"></div>
 
         <p class="mt-5">Hello Everyone, I'm Neeraj Pal and I am from Kanpur Uttar Pradesh. I did my High School
-          & Intermediate from Pt. Vishwambhar NaTh Inter College, Kanpur. Currently I am persuing my graduation in
-          Engineering Specialization in Computer Science From Vision College Of Management, Kanpur Affiliated By Dr.
+          & Intermediate from Pt. Vishwambhar Nath Inter College, Kanpur. Currently I am persuing my graduation in
+           From Vision College Of Management, Kanpur Affiliated By 
           C.S.J.M University, Kanpur.I am a B.C.A 3 <sup>rd</sup> Year Student. I have skill to make
           powerpint presentation and also have knowledge of HTML & CSS and Javascript I also make some projects using
-          HTML & Css and Javascript I made a clone of Amazon.com home page and Flipkart home page. and also make some
+          HTML & Css and Javascript I made a clone of Flipkart home page. and also make some
           forms and I made a simon game using Javascript.</p>
         <div class="container mt-4">
 
@@ -538,6 +554,46 @@ check.addEventListener("change",()=>{
    
   }
 })
+
+
+const getAllBtn = document.querySelectorAll("button");
+getAllBtn.forEach(function(eachcolorButton){
+  eachcolorButton.addEventListener("click",function(e){
+    const color = e.target.dataset.color;
+    document.documentElement.style.setProperty('--color',color);
+
+    }) 
+})
+
+
+
+
+
+
+let themeIcon = document.getElementById("themeIcon");
+let colorBox = document.getElementById("colorBox");
+let icon = document.getElementById("icon");
+
+icon.addEventListener("change",()=>{
+  if(icon.checked){
+
+ 
+    colorBox.style.left = "88%";
+    colorBox.style.display = "block";
+  
+  }
+
+else {
+
+ 
+    colorBox.style.left = "100%";
+    colorBox.style.display = "none";
+  
+
+}
+})
+
+
   </script>
 </body>
 
