@@ -68,14 +68,14 @@
         <div class="theme" id="colorBox">
          <div class="colorInner">
           <div>
-             <button class="btn btn1" data-color="#3498db">sb</button>
-          <button class="btn btn2" data-color="#ff1756">p</button>
-          <button class="btn btn3" data-color="#1cb65d">g</button>
+             <button class="buton btn1" data-color="#3498db">sbh</button>
+          <button class="buton btn2" data-color="#ff1756">p</button>
+          <button class="buton btn3" data-color="#1cb65d">g</button>
           </div>
          <div>
-           <button class="btn btn4" data-color="#f12f2f">r</button>
-          <button class="btn btn5" data-color="blue">bl</button>
-          <button class="btn btn6" data-color="#ae00ff">pl</button>
+           <button class="buton btn4" data-color="#f12f2f">r</button>
+          <button class="buton btn5" data-color="blue">bl</button>
+          <button class="buton btn6" data-color="#ae00ff">pl</button>
          </div>
          
          </div>
@@ -135,7 +135,7 @@
               <a href="https://www.facebook.com/profile.php?id=100037428103852" class="btn button" style="border-radius: 50%;"><i class="fa-brands fa-facebook" ></i></a>
               <a href="https://www.instagram.com/watashi_wa_maodesu" class="btn button" style="border-radius: 50%;"><i class="fa-brands fa-instagram" ></i></a>
               <a href="https://wa.me/<7905263694>" class="btn  button" style="border-radius: 50%;"><i class="fa-brands fa-whatsapp" ></i></a>
-              <a href="#" class="btn button" style="border-radius: 50%;"><i class="fa-brands fa-github" ></i></a>
+              <a href="https://github.com/NeerajTechVCM" class="btn button" style="border-radius: 50%;"><i class="fa-brands fa-github" ></i></a>
             </div>
             <br>
             <button class="btn button">Hire Me</button>
@@ -403,6 +403,12 @@
             <div class="col-md-12">
               <textarea placeholder="Message" class="form-control" rows="7"></textarea>
             </div>
+            <div class="row mt-5">
+              <div class="d-grid gap-2">
+                <button class="btn button" type="submit">Submit</button>
+              
+              </div>
+            </div>
           </div>
         </div>
 
@@ -410,7 +416,31 @@
     </div>
   </section>
   <!-- /contact -->
-
+<!-- footer -->
+ <footer class="page-footer">
+  <div class="container-fluid  text-light my-3 p-4" style="background-color: rgb(88, 85, 85); border-top-left-radius:10px; border-top-right-radius:10px;">
+    <div class="container d-flex" style="gap: 10px; flex-direction:column;">
+      <div class="row">
+        <center><h2><span>Neeraj Pal</span></h2></center>
+      </div>
+      <div class="row">
+        <center><h6 class="auto-type1"></h6></center>
+      </div>
+      <div class="row">
+        <center><div>
+          <a href="https://www.facebook.com/profile.php?id=100037428103852" class="btn button" style="border-radius: 50%;"><i class="fa-brands fa-facebook" ></i></a>
+          <a href="https://www.instagram.com/watashi_wa_maodesu" class="btn button" style="border-radius: 50%;"><i class="fa-brands fa-instagram" ></i></a>
+          <a href="https://wa.me/<7905263694>" class="btn  button" style="border-radius: 50%;"><i class="fa-brands fa-whatsapp" ></i></a>
+          <a href="https://github.com/NeerajTechVCM" class="btn button" style="border-radius: 50%;"><i class="fa-brands fa-github" ></i></a>
+        </div></center>
+      </div>
+      <div class="row">
+        <center><h2>Made By <span>Neeraj Pal</span></h2></center>
+      </div>
+    </div>
+  </div>
+ </footer>
+<!-- /footer -->
   <!-- scroll to top -->
   <div class="scrollToTop">
     <a href="#"> <i class="fa fa-caret-up"></i></a>
@@ -435,6 +465,13 @@
       strings: ["Neeraj pal", "Frontend Developer"],
       typeSpeed: 100,
       backSpeed: 100,
+      backDelay: 1000,
+      loop: true
+    });
+    var typed = new Typed('.auto-type1', {
+      strings: ["You Can Connect With me Through Given Link Below"],
+      typeSpeed: 60,
+      backSpeed: 60,
       backDelay: 1000,
       loop: true
     });
@@ -574,12 +611,12 @@ check.addEventListener("change",()=>{
 })
 
 
-const getAllBtn = document.querySelectorAll(".btn");
+const getAllBtn = document.querySelectorAll(".buton");
 getAllBtn.forEach(function(eachcolorButton){
   eachcolorButton.addEventListener("click",function(e){
     const color = e.target.dataset.color;
     document.documentElement.style.setProperty('--color',color);
-
+    colorBox.style.display = "none";
     }) 
 })
 

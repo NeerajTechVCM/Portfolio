@@ -25,6 +25,12 @@ color: var(--color);
 
 
 }
+.buton{
+  border: none;
+  outline: none;
+  width: 35px;
+  height: 35px;
+}
 #icon{
  
   opacity: 0;
@@ -324,7 +330,7 @@ textarea{
     height: 50px;
     border-radius: 50%;
     position: fixed;
-    bottom: 20px;
+    bottom: 33px;
     right: 20px;
     background: grey;
     
