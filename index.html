@@ -389,23 +389,23 @@
 
         <div class="container mt-5 p-5" style="border :1px solid rgb(173, 170, 170); border-radius:10px;">
           <div class="row ">
-            <form onsubmit="sendEmail(); reset(); return false;">
+            <form action="https://formspree.io/f/xjkbwdbd" method="post">
             <div class="col-md-12 ">
-              <input type="text" placeholder="Name" class="form-control" id="name">
+              <input type="text" placeholder="Name" class="form-control" id="name" name="name" required>
             </div>
             <div class="col-md-12 mt-3">
-              <input type="phone" placeholder="Mobile Number" class="form-control" id="phone">
+              <input type="phone" placeholder="Mobile Number" class="form-control" id="phone" name="phone" required>
             </div>
             <div class="col-md-12 mt-3">
-              <input type="email" placeholder="Email" class="form-control" id="email">
+              <input type="email" placeholder="Email" class="form-control" id="email" name="email" required>
             </div>
             <div class="col-md-12 mt-3">
-              <input type="text" placeholder="Subject" class="form-control" id="sub">
+              <input type="text" placeholder="Subject" class="form-control" id="sub" name="subject" required>
 
             </div>
 
             <div class="col-md-12 mt-3">
-              <textarea placeholder="Message" class="form-control" rows="7" id="msg"></textarea>
+              <textarea placeholder="Message" class="form-control" rows="7" id="msg" name="message" required></textarea>
             </div>
 
             <div class="d-grid gap-2 mt-3">
@@ -468,22 +468,8 @@
   <!-- /scroll to top -->
   <script src=" https://smtpjs.com/v3/smtp.js"></script>
   <script>
-    function sendEmail() {
-      Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "neeraj@gmail.com",
-        Password: "ABED341392C14414AEA842BA150A28C0422B",
-        To: 'np6848586@gmail.com',
-        From: document.getElementById("email").value,
-        Subject:  document.getElementById("sub").value,
-        Body: "Name:" + document.getElementById("name").value
-        + "<br>Mobile Number:" + document.getElementById("phone").value
-        + "<br>Email:" + document.getElementById("email").value
-        + "<br>:" + document.getElementById("msg").value
-      }).then(
-        message => alert("message sent success")
-      );
-    }
+   
+  
 
 
 
