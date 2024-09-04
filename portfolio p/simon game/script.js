@@ -6,13 +6,26 @@ let color = ["yellow", "green", "red", "purple"];
 let span=document.querySelector("span");
 let start=document.getElementById("start");
 let background=new Audio("music.mp3");
+let allBtns = document.querySelectorAll(".btn");
 let flash=new Audio("move.mp3");
 let highScore=0;
+function btndisable(){
+    for (btn of allBtns) {
+ 
+        btn.disabled=true;
+    
+    };
+}
+btndisable();
 start.addEventListener("click", () => {
+    for (btn of allBtns) {
+ 
+        btn.addEventListener("click", btnpress);
 
+};
     if (started == false) {
         console.log("game started");
-      
+       
         background.play();
      
         started = true;
@@ -58,44 +71,22 @@ function userflash(btn) {
         flash.pause();
     }, 250);
 };
-let allBtns = document.querySelectorAll(".btn");
-for (btn of allBtns) {
-    btn.addEventListener("click", btnpress);
 
 
-}
-let red=document.querySelector(".red");
-let yellow=document.querySelector(".yellow");
-let green=document.querySelector(".green");
-let purple=document.querySelector(".purple");
-window.addEventListener("keydown",(e)=>{
-  switch(e.key){
-    case "ArrowUp":
-        userflash(red);
-        userSeq.push("red");
-    
-        break;
-    case "ArrowDown":
-        userflash(purple);
-        userSeq.push("purple");
-        
-        break;
-    case "ArrowLeft":
-        userflash(yellow);
-        userSeq.push("yellow");
-     
-        break;
-    case "ArrowRight":
-        userflash(green);
-        userSeq.push("green");
-     
-        break;
-  }
-  console.log(userSeq);
-  checkAns(userSeq.length-1);
-});
+
+
+// function btnenable(){
+//     red.disabled=false;
+//     yellow.disabled=false;
+//     green.disabled=false;
+//     purple.disabled=false;
+// }
+// function btndisable(){
+ 
+// }
+
 function btnpress() {
-    let identityBtn = this;
+     let identityBtn = this;
     console.log("button was pressed");
     console.log(identityBtn);
     userflash(identityBtn);
@@ -104,6 +95,7 @@ function btnpress() {
     userSeq.push(userColor);
     console.log(userSeq);
     checkAns(userSeq.length-1);
+  
 }
 function checkAns(idx){
     
@@ -117,10 +109,11 @@ function checkAns(idx){
       
     }
     else{
+        
         h2.innerHTML=`Game Over!<b>Your score was :${level-1}</b><br>click Play button to start game`;
         document.body.style.background="red";
         let option=document.querySelector(".option");
-        option.style.top="41%";
+       
         background.pause();
      let gameover=new Audio("gameover.mp3");
      
@@ -130,7 +123,10 @@ function checkAns(idx){
             
             document.body.style.background="white"; 
         },150)
+     
         reset();
+      
+     
      
 
     }
@@ -138,8 +134,8 @@ function checkAns(idx){
 function reset(){
     userSeq=[];
     gameSeq=[];
-    level=0;
-   
+level=0; 
+
     started=false;
   
 }
