@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+  
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-6 ">
+                    <div class="row d-flex " style="flex-direction:column;">
+                      <div class="col-md-12 d-flex justify-content-stretch align-items-center" style="flex-direction:column;">
+                        <h2 class="mt-3 text-success ">Player Name</h2>
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <h5>First Player Name</h5>
+                        </div>
+                     
+                       
+                     
+                        <div class="col-md-4 ">
+                            <h5 id="first"></h5>
+                        </div>
+                        <div class="col-md-4">
+                            <span id="f-title"></span>
+                        </div>
+                        <div class="col-md-4">
+                            <select name="" id="fplayer">
+                                <option value="O">O</option>
+                                <option value="X">X</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <h5>Second Player Name</h5>
+                        </div>
+                     
+                     
+                     
+                        <div class="col-md-4">
+                            <h5 id="second"></h5>
+                        </div>
+                        <div class="col-md-4">
+                            <span id="s-title"></span>
+                        </div>
+                        <div class="col-md-4">
+                          
+                        <select name="" id="splayer">
+                            <option value="O">O</option>
+                            <option value="X" selected>X</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>   
+                <div class="col-md-12  mt-4 d-flex justify-content-stretch align-items-center" style="flex-direction:column;">
+
+                  
+                    <div class="row mt-3"><h2 class="text-success">Score Board</h2></div>
+                    <div class="row mt-3">
+                        <div class="col-md-10">
+                            <h5 id="FscoreName"></h5>
+                        </div>
+                        <div class="col-md-2">
+                            <span id="f-score">0</span>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-10">
+                            <h5 id="SscoreName"></h5>
+                        </div>
+                        <div class="col-md-2">
+                            <span id="s-score">0</span>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+               
+               
+                
+            </div>
+            <div class="col-md-6">
+                    
+                <div class="mcontainer">
+                    <div id="msg-container" class="hide ">
+                        <center>
+                            <p id="msg"></p>
+                            <button id="new-btn">New Game</button>
+                        </center>
+            
+                    </div>
+                    <h1>TIC TAC TOE</h1>
+                    <div class="game">
+                        <button class="box"></button>
+                        <button class="box"></button>
+                        <button class="box"></button>
+                        <button class="box"></button>
+                        <button class="box"></button>
+                        <button class="box"></button>
+                        <button class="box"></button>
+                        <button class="box"></button>
+                        <button class="box"></button>
+                    </div>
+                    <button id="reset-btn">RESET</button>
+                </div>
+                            </div>
+        </div>
+
+
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

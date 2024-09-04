@@ -13,7 +13,10 @@ color: var(--color);
 .button{
     background-color:var(--color);
 }
-    
+  .card-img-top{
+    height: 10rem;
+    object-fit: contain;
+  }  
 
 #themeIcon{
 
