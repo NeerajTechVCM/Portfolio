@@ -1,0 +1,57 @@
+
+body{
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.app{
+    width: 400px;
+    height: auto;
+    padding: 0px 20px ;
+    background-color: white;
+    border-radius: 8px;
+    
+}
+.app h2{
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(99, 88, 88);
+}
+#btn{
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    
+
+}
+#btn:hover:not([disabled]){
+    background-color: rgb(209, 170, 170);
+    color: white;
+}
+#btn:disabled{
+    cursor: no-drop;
+}
+#next-btn{
+    width:90px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: blueviolet;
+    color: white;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+
+}
+
+.correct{
+    background-color: rgb(42, 248, 42);
+}
+
+.incorrect{
+    background-color: rgb(248, 166, 42);
+}
