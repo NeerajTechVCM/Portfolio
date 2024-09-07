@@ -38,7 +38,7 @@
 </head>
 
 <body style="background-color: white;">
-    <nav class="navbar navbar-expand-lg " style="background-color: white; box-shadow:5px 5px 8px rgb(231, 228, 228)">
+    <nav class="navbar navbar-expand-lg Navbar" style="background-color: white; box-shadow:5px 5px 8px rgb(231, 228, 228)">
         <div class="container-fluid">
            
             <a class="navbar-brand" href="#" style="font-weight: 500;" style="font-size: 20px; text-decoration: underline;" class="open-btn" onclick="openSidebar()">
@@ -88,8 +88,8 @@
     </nav>
     <!-- Button trigger modal -->
 
-    <nav class="sidebar bg-light text-dark" id="sidebar">
-        <div class="sidebar-header">
+    <nav class="sidebar sideNavbar1 bg-light text-dark" id="sidebar" >
+        <div class="sidebar-header sideNavbar-header1">
             <button class="btn btn-light close-btn" onclick="closeSidebar()">×</button>
            
         </div>
@@ -98,6 +98,64 @@
             <input type="text" class="form-control py-3" style="border-radius: 0;" placeholder="Search for area ,Street name....">
            <div class="d-flex p-2 mt-2 justify-content-start" style="border: 1px solid rgb(219, 215, 215); ">
             <i class="fa-solid fa-location"></i> &nbsp; <p > Get Current Location <br> using GPS</p>
+           </div>
+        </div>
+       
+    </nav>
+    <nav class="navbar navbar-expand-lg  mobileNavbar" style="background-color: white; box-shadow:5px 5px 8px rgb(231, 228, 228)">
+        <div class="container-fluid">
+           
+            <a class="navbar-brand" href="#" style="font-weight: 500;" style="font-size: 20px; text-decoration: underline;" >
+                <img src="assets/logo-removebg-preview.png" alt="Bootstrap" width="50" height="50"
+            class="ms-lg-5 ms-md-5 disabled">
+              Other <i class="fa-solid fa-angle-down" id="other"></i>           </a>
+            <button class="navbar-toggler" type="button" onclick="openSideNavbar()"
+                 aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+          
+        </div>
+    </nav>
+  
+    <nav class="sidebar  sideNavbar2 bg-light text-dark" id="sideNavbar">
+        <div class="sidebar-header sideNavbar-header2">
+            <button class="btn btn-light close-btn2" onclick="closeSideNavbar()">×</button>
+            
+        </div>
+        <div class="sidebar-section sideNavbar-section2">
+          
+            <ul class="navbar-nav flex-column d-flex justify-content-center align-items-center" style="gap: 35px; font-weight:500;">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" aria-current="page" href="#">Swiggy Corporate</a>
+                </li>
+                <li class="nav-item">
+                    <!-- Button trigger modal -->
+
+                    <a class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#search" href="#"><i
+                            class="fa-solid fa-magnifying-glass"></i>
+                        Search
+                    </a>
+
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-dark" href="#">Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#">Help</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#signin" href="#"><i
+                            class="fa-solid fa-user"></i> Sign in
+                    </a>
+                    <a class="nav-link text-dark" href="#"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+                </li>
+
+
+            </ul>
            </div>
         </div>
        
@@ -1074,9 +1132,7 @@
         imgslide2.addEventListener("mouseup", dragstop2);
         imgslide2.addEventListener("mousemove", dragging2);
         imgslide2.addEventListener("mousedown", () => isdragging2 = true);
-        imgslide2.addEventListener("touchend", dragstop2);
-        imgslide2.addEventListener("touchmove", dragging2);
-        imgslide2.addEventListener("touchstart", () => isdragging2 = true);
+       
 
         function openSidebar() {
             document.getElementById("sidebar").style.left = "0";
@@ -1084,6 +1140,13 @@
         
         function closeSidebar() {
             document.getElementById("sidebar").style.left = "-500px";
+        }
+        function openSideNavbar() {
+            document.getElementById("sideNavbar").style.left = "0";
+        }
+        
+        function closeSideNavbar() {
+            document.getElementById("sideNavbar").style.left = "-250px";
         }
         
 
