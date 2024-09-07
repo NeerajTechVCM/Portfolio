@@ -14,6 +14,7 @@
     width: 100%;
     display: flex;
     gap: 10px;
+    cursor: grab;
  scroll-behavior: smooth;
     align-items: center; 
 }
@@ -40,6 +41,7 @@
     z-index: 3;
     opacity: 1;
     border-radius: 10px;
+   
 }
 .info{
     display: flex;
@@ -56,4 +58,52 @@
     width: 10rem;
     height: 4rem;
 }
+
+body {
+    margin: 0;
+}
+
+.sidebar {
+    width: 500px;
+    position: fixed;
+    top: 0;
+    left: -500px;
+    height: 100%;
+    transition: 0.3s;
+    padding: 20px;
+    z-index: 10;
+    
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #000;
+}
+
+.location-section {
+    margin-top: 20px;
+}
+
+
+
+
+@media (max-width: 997px) {
+    .sidebar {
+     display: none;
+    }
+    .filter{
+     display: none;
+    }
+
+    
+}
+
 

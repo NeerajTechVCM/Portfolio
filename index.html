@@ -84,8 +84,8 @@
         </div>
         <div class="col-md-6  d-flex justify-content-end align-items-center">
 
-          <label class="theme-switch">
-            <input type="checkbox" class="theme-switch__checkbox" id="theme">
+          <!-- <label class="theme-switch">
+            <input type="checkbox" class="theme-switch__checkbox" >
             <div class="theme-switch__container">
               <div class="theme-switch__clouds"></div>
               <div class="theme-switch__stars-container">
@@ -105,7 +105,18 @@
                 </div>
               </div>
             </div>
-          </label>
+          </label> -->
+
+          <!-- /* From Uiverse.io by Admin12121 */  -->
+<label class="switch-button" for="switch" style="position :absolute; top: 10%; right:7%;">
+  <div class="switch-outer"  >
+    <input id="switch" type="checkbox">
+    <div class="buttoncheck">
+      <span class="button-toggle"></span>
+      <span class="button-indicator"></span>
+    </div>
+  </div>
+</label>
         </div>
       </div>
     </div>
@@ -151,9 +162,9 @@
           <div class="col-md-6 d-flex justify-content-center align-items-center ">
 
 
-            <div class=" d-flex justify-content-center align-items-end  back ms-lg-5 mt-5 h-55 w-55 "
-              style="border-radius:36% 71% 10% 10% / 74% 79% 40% 29%; ">
-              <img src="assets/me.png" alt="" width="40% " height="50%" class="img-fluid ">
+            <div class=" d-flex justify-content-center align-items-end  back ms-lg-5 mt-5  "
+              style="border-radius: 55% 45% 45% 55% / 75% 80% 20% 25%; width:300px; height:300px;">
+           
             </div>
           </div>
         </div>
@@ -251,6 +262,7 @@
 
   <section class="page-section" id="skills">
     <div class="container-fluid mt-1 py-5 px-3">
+      <div class="container p-2">
       <h2>My <span>Skills</span></h2>
       <div style="width: 130px; height:5px; border-radius:10px" class="button"></div>
 
@@ -292,7 +304,7 @@
 
 
 
-
+    </div>
     </div>
   </section>
 
@@ -481,7 +493,7 @@
   <!-- footer -->
   <footer class="page-footer">
     <div class="container-fluid  text-light my-3 p-4"
-      style="background-color: rgb(88, 85, 85); border-top-left-radius:10px; border-top-right-radius:10px;">
+      style="background-color:grey; border-top-left-radius:10px; border-top-right-radius:10px;">
       <div class="container d-flex" style="gap: 10px; flex-direction:column;">
         <div class="row">
           <center>
@@ -678,7 +690,7 @@
     }).scroll();
 
     const body = document.getElementById("bg");
-    const check = document.getElementById("theme");
+    const check = document.getElementById("switch");
 
     check.addEventListener("change", () => {
       if (!(check.checked)) {
