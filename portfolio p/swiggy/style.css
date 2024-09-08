@@ -69,7 +69,7 @@ body {
 .sideNavbar1 {
     width: 500px;
     position: fixed;
-    top: 0;
+    top: 10%;
     left: -500px;
     height: 100%;
     transition: 0.3s;
@@ -80,7 +80,7 @@ body {
 .sideNavbar2 {
     width: 250px;
     position: fixed;
-    top: 0;
+    top: 10%;
     left: -250px;
     height: 100%;
     transition: 0.3s;
