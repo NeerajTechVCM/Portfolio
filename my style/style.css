@@ -338,9 +338,11 @@ textarea{
 }
 
 
-@media (max-width: 455px) {
+@media (max-width: 448px) {
   .back img {
-    transform: translate(8px,-90px) ;
+    transform: translate(0px,0px) ;
+    width: 70%;
+    height: 80%;
   }
   .back::after {
     content: " ";
