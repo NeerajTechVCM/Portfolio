@@ -340,7 +340,7 @@ textarea{
 
 @media (max-width: 448px) {
   .back img {
-    transform: translate(8px,-120px) ;
+    transform: translate(3px,-105px) ;
   }
   .back::after {
     content: " ";
