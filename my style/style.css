@@ -12,11 +12,47 @@ color: var(--color);
 }
 .button{
     background-color:var(--color);
+   color: white;
+
 }
   .card-img-top{
     height: 10rem;
     object-fit: contain;
   }  
+  .back{
+   
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+ 
+  }
+  .back img {
+    transform: translate(-10px,-149px) ;
+  }
+  .back::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width:355px; height:350px;
+   
+    background:transparent;
+    z-index: -1;
+   
+   border: 19px solid var(--color);
+    border-radius: 50%;
+  
+    transform-style: preserve-3d; /* Ensures children are rendered in 3D space */
+    transform: rotateX(20deg) rotateY(30deg); /* Optional rotation for better 3D effect */
+
+    /* Skew the circle to give a flat 3D appearance */
+    transform: skewY(-7deg) rotateX(50deg);
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2); /* Optional shadow for more depth */
+}
+
 
 #themeIcon{
 
@@ -33,6 +69,11 @@ color: var(--color);
   outline: none;
   width: 35px;
   height: 35px;
+}
+
+.button:hover{
+ background-color: var(--color);
+
 }
 #icon{
  
@@ -86,9 +127,7 @@ flex-direction: column;
   border-radius: 50%;
   color:blue ;
 }
-.back{
-  background-color: var(--color);
-}
+
 .btn6{
   background-color: #ae00ff;
   border-radius: 50%;
@@ -132,7 +171,7 @@ textarea{
     position: fixed;
     bottom: 33px;
     right: 20px;
-    background: rgb(182, 180, 180);
+    background: rgb(228, 226, 226);
     
     display: flex;
     justify-content: center;
@@ -185,141 +224,116 @@ textarea{
     color:#111111;
     background-color: rgb(215, 225, 226);
     border-radius: 50%;
-}
-
-/* From Uiverse.io by Admin12121 */ 
-.switch-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  justify-content: center;
-  margin: auto;
-  height: 55px;
-}
-i{
+}i{
   color: white;
 }
 
-.switch-button .switch-outer {
-  height: 100%;
-  background: #252532;
-  width: 115px;
-  border-radius: 165px;
-  -webkit-box-shadow: inset 0px 5px 10px 0px #16151c, 0px 3px 6px -2px #403f4e;
-  box-shadow: inset 0px 5px 10px 0px #16151c, 0px 3px 6px -2px #403f4e;
-  border: 1px solid #32303e;
-  padding: 6px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
+/* From Uiverse.io by andrew-demchenk0 */ 
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
 }
 
-.switch-button .switch-outer input[type="checkbox"] {
+.switch input {
   opacity: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  width: 0;
+  height: 0;
+}
+
+.slider {
   position: absolute;
-}
-
-.switch-button .switch-outer .button-toggle {
-  height: 42px;
-  width: 42px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#3b3a4e),
-    to(#272733)
-  );
-  background: -o-linear-gradient(#3b3a4e, #272733);
-  background: linear-gradient(#3b3a4e, #272733);
-  border-radius: 100%;
-  -webkit-box-shadow: inset 0px 5px 4px 0px #424151, 0px 4px 15px 0px #0f0e17;
-  box-shadow: inset 0px 5px 4px 0px #424151, 0px 4px 15px 0px #0f0e17;
-  position: relative;
-  z-index: 2;
-  -webkit-transition: left 0.3s ease-in;
-  -o-transition: left 0.3s ease-in;
-  transition: left 0.3s ease-in;
+  cursor: pointer;
+  top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73C0FC;
+  transition: .4s;
+  border-radius: 30px;
 }
 
-.switch-button
-  .switch-outer
-  input[type="checkbox"]:checked
-  + .buttoncheck
-  .button-toggle {
-  left: 58%;
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: .4s;
 }
 
-.switch-button
-  .switch-outer
-  input[type="checkbox"]:checked
-  + .buttoncheck
-  .button-indicator {
-  -webkit-animation: indicator 1s forwards;
-  animation: indicator 1s forwards;
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
 }
 
-.switch-button .switch-outer .buttoncheck {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
+.moon svg {
+  fill: #73C0FC;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
 }
 
-.switch-button .switch-outer .button-indicator {
-  height: 25px;
-  width: 25px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  border-radius: 50%;
-  border: 3px solid #ef565f;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  right: 10px;
-  position: relative;
+/* .switch:hover */.sun svg {
+  animation: rotate 15s linear infinite;
 }
 
-@-webkit-keyframes indicator {
-  30% {
-    opacity: 0;
-  }
-
+@keyframes rotate {
+ 
   0% {
-    opacity: 1;
+    transform: rotate(0);
   }
 
   100% {
-    opacity: 1;
-    border: 3px solid #60d480;
-    left: -68%;
+    transform: rotate(360deg);
   }
 }
 
-@keyframes indicator {
-  30% {
-    opacity: 0;
+/* .switch:hover */.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+ 
+  0% {
+    transform: rotate(0deg);
   }
 
-  0% {
-    opacity: 1;
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
   }
 
   100% {
-    opacity: 1;
-    border: 3px solid #60d480;
-    left: -68%;
+    transform: rotate(0deg);
   }
 }
+
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
+}
+

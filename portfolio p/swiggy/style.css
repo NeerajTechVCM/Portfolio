@@ -43,6 +43,9 @@
     border-radius: 10px;
    
 }
+.mobilenav{
+    display: none;
+}
 .info{
     display: flex;
     justify-content: center;
@@ -133,6 +136,9 @@ color: orangered;
     .Navbar{
         display: none;
         
+    }
+    .mobilenav{
+        display: block;
     }
 .mobileNavbar{
     display: block;
