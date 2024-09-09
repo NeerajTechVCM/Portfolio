@@ -29,7 +29,9 @@ color: var(--color);
  
   }
   .back img {
-    transform: translate(-10px,-149px) ;
+    transform: translate(10px,-180px) ;
+    width: 340px;
+    height: 500px;
   }
   .back::after {
     content: " ";
@@ -340,28 +342,15 @@ textarea{
 
 @media (max-width: 448px) {
   .back img {
-    transform: translate(3px,-110px) ;
+    transform: translate(55px,-105px) ;
+    width: 210px;
+    height: 360px;
   }
   .back::after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
+ 
     width:290px; height:285px;
    
-    background:transparent;
-    z-index: -1;
-   
-   border: 19px solid var(--color);
-    border-radius: 50%;
-  
-    transform-style: preserve-3d; /* Ensures children are rendered in 3D space */
-    transform: rotateX(20deg) rotateY(30deg); /* Optional rotation for better 3D effect */
 
-    /* Skew the circle to give a flat 3D appearance */
-    transform: skewY(-7deg) rotateX(50deg);
-    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2); /* Optional shadow for more depth */
 }
 
 
