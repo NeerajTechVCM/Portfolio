@@ -13,8 +13,10 @@ color: var(--color);
 .button{
     background-color:var(--color);
    color: white;
+       box-shadow: 5px 5px 25px var(--color); 
 
 }
+
   .card-img-top{
     height: 10rem;
     object-fit: contain;
@@ -52,7 +54,7 @@ color: var(--color);
 
     /* Skew the circle to give a flat 3D appearance */
     transform: skewY(-7deg) rotateX(50deg);
-    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2); /* Optional shadow for more depth */
+    box-shadow: 5px 5px 25px var(--color); /* Optional shadow for more depth */
 }
 
 

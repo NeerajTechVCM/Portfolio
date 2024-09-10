@@ -21,13 +21,16 @@
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand " href="#" style="margin-left: 100px;"><span>Portfolio</span></a>
+      <a class="navbar-brand " href="#" style="margin-left: 100px;"><span> <b>Portfolio</b>
+      </span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -68,14 +71,14 @@
           <div class="theme" id="colorBox">
             <div class="colorInner">
               <div>
-                <button class="buton btn1" data-color="#3498db">sbh</button>
-                <button class="buton btn2" data-color="#ff1756">p</button>
-                <button class="buton btn3" data-color="#1cb65d">g</button>
+                <button class="buton btn1" data-color="#3498db"></button>
+                <button class="buton btn2" data-color="#ff1756"></button>
+                <button class="buton btn3" data-color="#1cb65d"></button>
               </div>
               <div>
-                <button class="buton btn4" data-color="#f12f2f">r</button>
-                <button class="buton btn5" data-color="blue">bl</button>
-                <button class="buton btn6" data-color="#ae00ff">pl</button>
+                <button class="buton btn4" data-color="#f12f2f"></button>
+                <button class="buton btn5" data-color="blue"></button>
+                <button class="buton btn6" data-color="#ae00ff"></button>
               </div>
 
             </div>
@@ -109,16 +112,15 @@
       <div class="container p-2">
         <div class="row gy-4">
           <div class="col-md-12 col-lg-6">
-            <h6 class="mt-5">
+            <h4 class="mt-5">
               Hi THERE,
-            </h6>
+            </h4>
             <br>
-            <h2>I Am <span class="auto-type" id="name">
-
+            <h2 style="font-size: 40px;">I Am <span class="auto-type" id="name" >
               </span>
             </h2>
             <br>
-            <p>Hii Everyone I'm Front-end Developer </p>
+            <p style="font-size: 20px;">Hii Everyone I'm Front-end Developer </p>
             <br>
             <div>
               <a href="https://www.facebook.com/profile.php?id=100037428103852" class="btn button"
@@ -152,7 +154,7 @@
   <section class="page-section" id="about">
     <div class="container-fluid mt-1 py-5 px-3">
       <div class="container p-2">
-        <h2>About <span>Me</span></h2>
+        <h2 data-aos="flip-left">About <span>Me</span></h2>
         <div style="width: 130px; height:5px; border-radius:10px" class="button"></div>
 
         <div style="width: 80px; height:5px; border-radius:10px" class="mt-1 button"></div>
@@ -239,7 +241,7 @@
   <section class="page-section" id="skills">
     <div class="container-fluid mt-1 py-5 px-3">
       <div class="container p-2">
-      <h2>My <span>Skills</span></h2>
+      <h2 data-aos="flip-left">My <span>Skills</span></h2>
       <div style="width: 130px; height:5px; border-radius:10px" class="button"></div>
 
       <div style="width: 80px; height:5px; border-radius:10px" class="mt-1 button"></div>
@@ -290,7 +292,7 @@
       <div class="container">
 
 
-        <h2>My <span>Projects</span></h2>
+        <h2 data-aos="flip-left">My <span>Projects</span></h2>
         <div style="width: 130px; height:5px; border-radius:10px" class="button"></div>
 
         <div style="width: 80px; height:5px; border-radius:10px" class="mt-1 button"></div>
@@ -304,7 +306,8 @@
 
 
 
-        <div class="card p-4 cardScale" style="width: 18rem;">
+        <div class="card p-4 cardScale" style="width: 18rem;" data-aos="fade-up"
+     >
           <img src="assets/tic.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h3 class="card-title"><span>Tic Tac Toe</span></h3>
@@ -317,7 +320,8 @@
         </div>
 
 
-        <div class="card p-4 cardScale" style="width: 18rem;">
+        <div class="card p-4 cardScale" style="width: 18rem;" data-aos="fade-up"
+     >
           <img src="assets/t.png" class="card-img-top h-75" alt="...">
           <div class="card-body">
             <h3 class="card-title"><span>Todo List</span></h3>
@@ -328,7 +332,8 @@
         </div>
 
 
-        <div class="card p-4 cardScale" style="width: 18rem; ">
+        <div class="card p-4 cardScale" style="width: 18rem;" data-aos="fade-up"
+     >
           <img src="assets/simon.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h3 class="card-title"><span>Simon Game </span></h3>
@@ -340,7 +345,7 @@
         </div>
 
 
-        <div class="card p-5 cardScale" style="width: 18rem; height:30rem;">
+        <div class="card p-5 cardScale" style="width: 18rem;">
           <img src="assets/notes.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h3 class="card-title"><span>Notes</span></h3>
@@ -353,7 +358,8 @@
         </div>
 
 
-        <div class="card p-4 cardScale" style="width: 18rem; ">
+        <div class="card p-4 cardScale" style="width: 18rem;" data-aos="fade-up"
+     >
           <img src="assets/quiz.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h3 class="card-title"><span>Quiz App</span></h3>
@@ -366,7 +372,8 @@
         </div>
 
 
-        <div class="card p-4 cardScale" style="width: 18rem;">
+        <div class="card p-4 cardScale" style="width: 18rem;" data-aos="fade-up"
+     >
           <img src="assets/calculator.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h3 class="card-title"><span>Calculator</span></h3>
@@ -379,7 +386,8 @@
 
           </div>
         </div>
-        <div class="card p-4 cardScale" style="width: 18rem;">
+        <div class="card p-4 cardScale" style="width: 18rem;" data-aos="fade-up"
+     >
           <img src="assets/reastaurant.PNG" class="card-img-top" alt="...">
           <div class="card-body">
             <h3 class="card-title"><span>Restaurant website</span></h3>
@@ -392,7 +400,8 @@
 
           </div>
         </div>
-        <div class="card p-4 cardScale" style="width: 18rem;">
+        <div class="card p-4 cardScale" style="width: 18rem;" data-aos="fade-up"
+     >
           <img src="assets/swiggy.PNG" class="card-img-top" alt="...">
           <div class="card-body">
             <h3 class="card-title"><span>Swiggy Home page Clone</span></h3>
@@ -418,7 +427,7 @@
       <div class="container">
 
 
-        <h2>Contact<span>Us</span></h2>
+        <h2 data-aos="flip-left">Contact<span>Us</span></h2>
         <div style="width: 130px; height:5px; border-radius:10px" class="button"></div>
 
         <div style="width: 80px; height:5px; border-radius:10px" class="mt-1 button"></div>
@@ -716,7 +725,7 @@
 
       }
     })
-
+    AOS.init();
 
   </script>
 </body>
