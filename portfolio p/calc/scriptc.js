@@ -11,7 +11,7 @@ button.addEventListener('click',(e)=>{
         screen.value="";
         }
     else if(e.target.innerHTML=='Del'){
-        screen.value=string.substring(0,screen.value.length-1);
+        screen.value=screen.value.substring(0,screen.value.length-1);
     }
     else if(e.target.innerHTML=='%'){
         
