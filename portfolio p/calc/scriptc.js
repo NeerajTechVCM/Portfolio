@@ -5,13 +5,13 @@ Array.from(buttons).forEach((button)=>{
 button.addEventListener('click',(e)=>{
 
     if(e.target.innerHTML=='='){
-        screen.value=eval(string);
+        screen.value=eval(screen.value);
          }
     else if(e.target.innerHTML=='AC'){
         screen.value="";
         }
     else if(e.target.innerHTML=='Del'){
-        screen.value=string.substring(0,string.length-1);
+        screen.value=string.substring(0,screen.value.length-1);
     }
     else if(e.target.innerHTML=='%'){
         
